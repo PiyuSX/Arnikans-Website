@@ -27,7 +27,7 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="relative hidden md:block">
+          <div className="relative hidden md:block" style={{ marginLeft: '-100px' }}>
             <TechSolarSystem />
           </div>
         </div>
