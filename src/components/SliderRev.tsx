@@ -40,7 +40,7 @@ const Sliderrev = () => {
     const duplicatedSlides: Slide[] = [...slides, ...slides];
 
     return (
-        <div className="relative w-full overflow-hidden mt-8">
+        <div className="relative w-full overflow-hidden mt-8 hidden md:block">
             {/* Wrapping div for seamless looping */}
             <motion.div
                 className="flex"
