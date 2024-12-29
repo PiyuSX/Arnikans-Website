@@ -14,13 +14,14 @@ export default function Hero() {
               Ultimate Group Of Computer Students
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              We are a team of class 11 computer students offering <a href="https://get.arniko.tech" className="text-purple-600 underline">arnikans.tech</a> Domains for free.
+              We are a team of class 11 computer students offering <a href="https://get.arnikans.tech" target='_blank' className="text-purple-600 underline">arnikans.tech</a> Domains for free.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="https://get.arniko.tech"
+                href="https://get.arnikans.tech"
                 className="px-8 py-4 border-2 border-gray-900 text-gray-900 rounded-lg 
                 hover:bg-gray-900 hover:text-white transition-colors font-semibold"
+                target='_blank'
               >
                 Get A Free Domain Here
               </a>

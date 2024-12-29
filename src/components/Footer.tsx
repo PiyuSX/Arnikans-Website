@@ -7,8 +7,9 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
           <a
-            href="https://get.arniko.tech"
+            href="https://get.arnikans.tech"
             className="hover:text-blue-400 transition-colors"
+            target='_blank'
           >
             Get Domain
           </a>
