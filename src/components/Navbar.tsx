@@ -63,7 +63,7 @@ export default function Navbar() {
                   About
                 </a>
                 <a href="#training" className="text-gray-900 hover:text-purple-600 transition-colors">
-                  Learn Web
+                  Learn
                 </a>
                 <a href="#offers" className="text-gray-900 hover:text-purple-600 transition-colors">
                   Offers
@@ -88,7 +88,7 @@ export default function Navbar() {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/70 backdrop-blur-md rounded-lg">
               <a href="#home" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Home</a>
               <a href="#about" className="block px-3 py-2 text-gray-900 hover:text-purple-600">About</a>
-              <a href="#training" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Training/Workshops</a>
+              <a href="#training" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Learn</a>
               <a href="#offers" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Offers</a>
               <a href="#contact" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Contact</a>
             </div>

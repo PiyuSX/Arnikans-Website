@@ -36,7 +36,7 @@ export default function Training() {
     <div id="training" className="py-24 bg-white">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-          YouTube Videos & Playlists
+          Mine Personal Choices
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {playlists.map((playlist, index) => (
