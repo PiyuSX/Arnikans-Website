@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const TYPING_SPEED = 150;
@@ -37,6 +38,11 @@ const useTypewriter = (text: string) => {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const typedText = useTypewriter('ARNIKANS');
+  const navigate = useNavigate();
+
+  const handleNavigation = (hash: string) => {
+    navigate(`/#${hash}`);
+  };
 
   return (
     <>
@@ -49,28 +55,31 @@ export default function Navbar() {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center">
-              <a href="/" className="text-2xl font-bold text-purple-600">
+              <Link to="/" className="text-2xl font-bold text-purple-600">
                 {typedText}|
-              </a>
+              </Link>
             </div>
             
             <div className="hidden md:block">
               <div className="flex items-center space-x-8">
-                <a href="#home" className="text-gray-900 hover:text-purple-600 transition-colors">
+                <button onClick={() => handleNavigation('home')} className="text-gray-900 hover:text-purple-600 transition-colors">
                   Home
-                </a>
-                <a href="#about" className="text-gray-900 hover:text-purple-600 transition-colors">
+                </button>
+                <button onClick={() => handleNavigation('about')} className="text-gray-900 hover:text-purple-600 transition-colors">
                   About
-                </a>
-                <a href="#training" className="text-gray-900 hover:text-purple-600 transition-colors">
-                  Learn
-                </a>
-                <a href="#offers" className="text-gray-900 hover:text-purple-600 transition-colors">
+                </button>
+                <button onClick={() => handleNavigation('offers')} className="text-gray-900 hover:text-purple-600 transition-colors">
                   Offers
-                </a>
-                <a href="#contact" className="text-gray-900 hover:text-purple-600 transition-colors">
+                </button>
+                <button onClick={() => handleNavigation('contact')} className="text-gray-900 hover:text-purple-600 transition-colors">
                   Contact
-                </a>
+                </button>
+                <Link to="/learn" className="text-gray-900 hover:text-purple-600 transition-colors">
+                  Learn
+                </Link>
+                <Link to="/portfolio" className="text-gray-900 hover:text-purple-600 transition-colors">
+                  Portfolio
+                </Link>
               </div>
             </div>
 
@@ -86,11 +95,24 @@ export default function Navbar() {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/70 backdrop-blur-md rounded-lg">
-              <a href="#home" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Home</a>
-              <a href="#about" className="block px-3 py-2 text-gray-900 hover:text-purple-600">About</a>
-              <a href="#training" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Learn</a>
-              <a href="#offers" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Offers</a>
-              <a href="#contact" className="block px-3 py-2 text-gray-900 hover:text-purple-600">Contact</a>
+              <button onClick={() => handleNavigation('home')} className="block px-3 py-2 text-gray-900 hover:text-purple-600">
+                Home
+              </button>
+              <button onClick={() => handleNavigation('about')} className="block px-3 py-2 text-gray-900 hover:text-purple-600">
+                About
+              </button>
+              <Link to="/learn" className="block px-3 py-2 text-gray-900 hover:text-purple-600">
+                Learn
+              </Link>
+              <button onClick={() => handleNavigation('offers')} className="block px-3 py-2 text-gray-900 hover:text-purple-600">
+                Offers
+              </button>
+              <button onClick={() => handleNavigation('contact')} className="block px-3 py-2 text-gray-900 hover:text-purple-600">
+                Contact
+              </button>
+              <Link to="/portfolio" className="block px-3 py-2 text-gray-900 hover:text-purple-600">
+                Portfolio
+              </Link>
             </div>
           </div>
         )}
