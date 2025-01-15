@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../components/Footer'; // Import Footer component
-import { Youtube } from 'lucide-react';
+import playlists from '../data/playlists'; // Import playlists data
 
 const getYouTubeEmbedUrl = (link: string) => {
   const listIdMatch = link.match(/list=([^&]+)/);
@@ -15,24 +15,6 @@ const getYouTubeEmbedUrl = (link: string) => {
 };
 
 export default function Learn() {
-  const playlists = [
-    {
-      title: "Code with Harry Sigma WebDev",
-      link: "https://www.youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w",
-      icon: Youtube,
-    },
-    {
-      title: "100 Days Python Course",
-      link: "https://www.youtube.com/playlist?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg",
-      icon: Youtube,
-    },
-    {
-      title: "WebDev Basics",
-      link: "https://www.youtube.com/watch?v=voXYG17rhQA",
-      icon: Youtube,
-    },
-  ];
-
   return (
     <div id="learn" className="min-h-screen flex flex-col">
       <div className="flex-grow py-24 bg-white">
